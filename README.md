@@ -2,8 +2,8 @@
 These snippets aim to make typesetting LaTeX faster in external programs, such as XMIND. In XMIND there are currently no autocomplete or ways to create macros.
 
 These snippets are partly based on:
-- Argentinator's [blog post] (https://www.autohotkey.com/board/topic/6949-script-for-latex/)
-- [A porting] (https://github.com/bloodbornebi/latex-snippets-for-windows/tree/improved-latex-shortcuts) by @bloodbornebi of Gilles Castel's original [LaTeX+vim snippets] (https://castel.dev/post/lecture-notes-1/).
+- Argentinator's [blog post](https://www.autohotkey.com/board/topic/6949-script-for-latex/)
+- [A porting](https://github.com/bloodbornebi/latex-snippets-for-windows/tree/improved-latex-shortcuts) by @bloodbornebi of Gilles Castel's original [LaTeX+vim snippets](https://castel.dev/post/lecture-notes-1/).
 
 ## Installation
 Install `AutoHotKey v.2` and `XMIND`.
