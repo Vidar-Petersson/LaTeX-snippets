@@ -1,12 +1,15 @@
-# LaTeX+XMIND+Autohotkey snippets
-These snippets aim to make typesetting LaTeX faster in external programs, such as XMIND. In XMIND there are currently no autocomplete or ways to create macros.
+# LaTeX+Autohotkey snippets
+Want to typeset LaTeX faster then handwriting? These snippets aim to make typesetting LaTeX faster in external programs, such as XMIND. In XMIND there are currently no autocomplete or ways to create macros.
 
 These snippets are partly based on:
 - Argentinator's [blog post](https://www.autohotkey.com/board/topic/6949-script-for-latex/)
 - [A porting](https://github.com/bloodbornebi/latex-snippets-for-windows/tree/improved-latex-shortcuts) by @bloodbornebi of Gilles Castel's original [LaTeX+vim snippets](https://castel.dev/post/lecture-notes-1/).
+- [Masacroso's snippets](https://github.com/Masacroso/Script-LaTeX)
 
 ## Installation
-Install `AutoHotKey v.2` and `XMIND`.
+- Install `AutoHotKey v.2`.
+- Create or download the AutoHotKey script `LaTeX-snippets.ahk`.
+- Open the program specified in the script, by default XMIND.exe.
 
 ### Run on start-up
 1. Find the script file, select it, and press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
@@ -15,7 +18,7 @@ Install `AutoHotKey v.2` and `XMIND`.
 
 
 ## Usage
-The majority of snippets uses a combination of keystrokes 
+The majority of snippets uses either key combinations (shortcuts) or hotstrings. Below are an explanation of the most common shortcuts and their equivalent in .ahk.
 
 <table class="info fixed">
   <tr>
@@ -44,7 +47,7 @@ The majority of snippets uses a combination of keystrokes
   </tr>
   <tr>
     <td class="center bold">&amp;</td>
-    <td>An ampersand may be used between any two keys or mouse buttons to combine them into a custom hotkey. See <a href="#combo">below</a> for details.</td>
+    <td>An ampersand may be used between any two keys or mouse buttons to combine them into a custom hotkey.</td>
   </tr>
   <tr id="LeftRight">
     <td class="center bold">&lt;</td>
@@ -60,7 +63,3 @@ The majority of snippets uses a combination of keystrokes
 
   </tr>
 </table>
-
-Some snippets uses hotstrings and autocompletes instantly.
-
-Open the file to see all shortcuts.
