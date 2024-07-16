@@ -1,5 +1,5 @@
 # LaTeX+Autohotkey snippets
-Want to typeset LaTeX faster then handwriting? These snippets aim to make typesetting LaTeX faster in external programs, such as XMIND. In XMIND there are currently no autocomplete or ways to create macros.
+Want to typeset LaTeX faster then writing? These snippets aim to make typesetting LaTeX ligtning fast in external programs, such as XMIND. In XMIND there are currently no autocomplete or ways to create macros.
 
 These snippets are partly based on:
 - Argentinator's [blog post](https://www.autohotkey.com/board/topic/6949-script-for-latex/)
