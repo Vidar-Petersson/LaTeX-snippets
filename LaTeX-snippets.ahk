@@ -1,6 +1,7 @@
 #Requires AutoHotkey v2.0 ; Make sure you download and use the >2.0 version of AHK
 SendMode "Input"  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
+#Include ImagePut.ahk ; Enables pasting of images
 #Hotif WinActive("ahk_exe xmind.exe") ; Ensures shortcuts only work when XMind is in focus. Change the second argument if you want a different application.
 
 ; HotKey explanation:
@@ -295,6 +296,32 @@ NumpadIns::Send "{SPACE}{BACKSPACE}\varnothing"
 ::imp::\implies
 ::imb::\impliedby
 
-; constructions
+; Constructions
 ::intii::\int_{-\infty}^{\infty}  \ dx{left 5}
 ::intoi::\int_{0}^{\infty}  \ dx{left 5}
+
+; Images
+InsertImage(name) {
+    ImagePutClipboard("./images/" name ".png") ; Make sure the corresponding image is stored and named correctly in the specified subfolder
+    ClipWait
+    Send "^v"
+    Sleep "10"
+    Send name
+    Send "{enter}"
+}
+
+::def::{
+    InsertImage("def")
+}
+::beräkna:: {
+    InsertImage("beräkna")
+}
+::energi:: {
+    InsertImage("energi")
+}
+::knep:: {
+    InsertImage("knep")
+}
+::kraft:: {
+    InsertImage("kraft")
+}
