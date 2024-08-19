@@ -67,5 +67,5 @@ Below are an explanation of the most common shortcuts and their equivalent in .a
 ### Hotstrings
 End character is either tab or space.
 
-#### Images
-Make sure the image is saved as a png in `./images` with the correct name.
+### Images
+Make sure the image is saved as a png in `./images` with the correct name. In order to add more images just add a new line in the end if the .ahk file.
