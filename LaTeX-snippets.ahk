@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0 ; Make sure you download and use the >2.0 version of AHK
 SendMode "Input"  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
-#Include ImagePut.ahk ; Enables pasting of images
+#Include ./images/#ImagePut.ahk ; Enables pasting of images
 #Hotif WinActive("ahk_exe xmind.exe") ; Ensures shortcuts only work when XMind is in focus. Change the second argument if you want a different application.
 
 ; HotKey explanation:
@@ -121,7 +121,10 @@ SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
     Send "{backspace}{right 3}"
     ih.Start()
     ih.Wait()
-    Send "{backspace}{right 4}"
+    Send "{backspace}{right 1}"
+    ih.Start()
+    ih.Wait()
+    Send "{backspace}{right 3}"
     ih.Start()
     ih.Wait()
     Send "{backspace}{end}"
