@@ -41,41 +41,41 @@ SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
 
 <#Space::Send " \ "
 
-; Uppercase Greek, some Hebrew, number set and special characters, windows + left shift + X
-+<#a::Send "aleph "
-+<#b::Send "beth "
-+<#c::Send "mathbb{C} "
-+<#d::Send "\Delta "
-+<#e::Send "\ell "
-+<#f::Send "\Phi "
-+<#g::Send "\Gamma "
-+<#h::Send "H "
-+<#i::Send "\imath "
-+<#j::Send "\jmath "
-+<#k::Send "K "
-+<#l::Send "\Lambda "
-+<#m::Send "M "
-+<#n::Send "\mathbb{N} "
-+<#o::Send "O "
-+<#p::Send "\Pi "
-+<#q::Send "\Psi "
-+<#r::Send "\mathbb{R} "
-+<#s::Send "\Sigma "
-+<#t::Send "T "
-+<#u::Send "\Theta "
+; Uppercase Greek, some Hebrew, number set and special characters, windows + ctrl + X
+^<#a::Send "aleph "
+^<#b::Send "beth "
+^<#c::Send "mathbb{C} "
+^<#d::Send "\Delta "
+^<#e::Send "\ell "
+^<#f::Send "\Phi "
+^<#g::Send "\Gamma "
+^<#h::Send "H "
+^<#i::Send "\imath "
+^<#j::Send "\jmath "
+^<#k::Send "K "
+^<#l::Send "\Lambda "
+^<#m::Send "M "
+^<#n::Send "\mathbb{N} "
+^<#o::Send "O "
+^<#p::Send "\Pi "
+^<#q::Send "\Psi "
+^<#r::Send "\mathbb{R} "
+^<#s::Send "\Sigma "
+^<#t::Send "T "
+^<#u::Send "\Theta "
 
-+<#w::Send "\Omega "
-+<#x::Send "\Xi "
-+<#y::Send "\Upsilon "
-+<#z::Send "\mathbb{Z} "
+^<#w::Send "\Omega "
+^<#x::Send "\Xi "
+^<#y::Send "\Upsilon "
+^<#z::Send "\mathbb{Z} "
 
 +<#Space::Send "\quad"
 
 ; Favorites and special macros, windows+left CTRL
-^<#a::Send "||{left}" ; abs
-^<#b::Send "\bra{{}}{}}{LEFT}" ;Dirac bra
++<#a::Send "||{left}" ; abs
++<#b::Send "\bra{{}}{}}{LEFT}" ;Dirac bra
 
-^<#c::{ ; cases
++<#c::{ ; cases
     Send "\begin{{}cases{}}{ENTER}"
     ih := InputHook("V", "{SPACE}")
     ih.Start()
@@ -86,7 +86,7 @@ SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
     Send "{ENTER}\end{{}cases{}}"
 }
 
-^<#d:: { ; leibniz derivative
++<#d:: { ; leibniz derivative
     Send "\frac{{}d f{}}{{}d x{}}{left 6}"
     ih := InputHook("V", "{SPACE}")
     ih.Start()
@@ -97,9 +97,9 @@ SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
     Send "{backspace}{end}"
 }
 
-^<#e::Send "\exp \left(  \right){left 8}" ; exp
++<#e::Send "\exp \left(  \right){left 8}" ; exp
 
-^<#f:: { ; fraction
++<#f:: { ; fraction
     Send "\frac{{}{}}{{}{}}{left 3}"
     ih := InputHook("V", "{SPACE}")
     ih.Start()
@@ -110,10 +110,10 @@ SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
     Send "{backspace}{end}"
 }
 
-^<#g::Send ""
-^<#h::Send ""
++<#g::Send ""
++<#h::Send ""
 
-^<#i:: { ; integral
++<#i:: { ; integral
     Send "\int_{{}{}}{^}{{}{}}\ d{left 7}"
     ih := InputHook("V", "{SPACE}")
     ih.Start()
@@ -130,10 +130,10 @@ SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
     Send "{backspace}{end}"
 }
 
-^<#j::Send ""
-^<#k::Send ""
++<#j::Send ""
++<#k::Send ""
 
-^<#l:: { ; limit
++<#l:: { ; limit
     Send "\lim_{{} \to {}}{left 6}"
     ih := InputHook("V", "{SPACE}")
     ih.Start()
@@ -144,7 +144,7 @@ SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
     Send "{backspace}{end}"
 }
 
-^<#m::{ ; bracket matrix
++<#m::{ ; bracket matrix
     Send "\begin{{}bmatrix{}}{ENTER}"
     ih := InputHook("V", "{SPACE}")
     ih.Start()
@@ -155,9 +155,9 @@ SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
     Send "{ENTER}\end{{}bmatrix{}}"
 }
 
-^<#o::Send ""
++<#o::Send ""
 
-^<#p:: { ; partial derivative
++<#p:: { ; partial derivative
     Send "\frac{{}\partial f{}}{{}\partial x{}}{left 13}"
     ih := InputHook("V", "{SPACE}")
     ih.Start()
@@ -168,9 +168,9 @@ SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
     Send "{backspace}{end}"
 }
 
-^<#r::Send "\mathbf{{}}{}}{LEFT}" ; mathbf
++<#r::Send "\mathbf{{}}{}}{LEFT}" ; mathbf
 
-^<#s::{ ; summation
++<#s::{ ; summation
     Send "\sum_{{}{}}{^}{{}{}}{left 4}"
     ih := InputHook("V", "{SPACE}")
     ih.Start()
@@ -181,15 +181,15 @@ SetWorkingDir A_ScriptDir  ; Ensures a consistent starting directory.
     Send "{backspace}{end}"
 }
 
-^<#t::Send "\text{{}}{}}{LEFT}" ; text input
-^<#u::Send ""
-^<#v::Send "\vec{{}{}}{LEFT}" ; arrow vector
-^<#w::Send "\mathbf{{}{}}{LEFT}" ; bold vector
++<#t::Send "\text{{}}{}}{LEFT}" ; text input
++<#u::Send ""
++<#v::Send "\vec{{}{}}{LEFT}" ; arrow vector
++<#w::Send "\mathbf{{}{}}{LEFT}" ; bold vector
 
-^<#Up::Send "{^}{{}{}}{LEFT}" ; power
-^<#Down::Send "{_}{{}{}}{LEFT}" ; subscript
-^<#Left::Send "\left" 
-^<#Right::Send "\right"
++<#Up::Send "{^}{{}{}}{LEFT}" ; power
++<#Down::Send "{_}{{}{}}{LEFT}" ; subscript
++<#Left::Send "\left" 
++<#Right::Send "\right"
 
 ; Other features
 ^Enter::Send "{SPACE}{BACKSPACE}\\{ENTER}" ; CTRL+ENTER
@@ -300,8 +300,8 @@ NumpadIns::Send "{SPACE}{BACKSPACE}\varnothing"
 ::imb::\impliedby
 
 ; Constructions
-::intii::\int_{-\infty}^{\infty}  \ dx{left 5}
-::intoi::\int_{0}^{\infty}  \ dx{left 5}
+::intii::\int_{{}-\infty{}}{^}{{}\infty{}}  \ dx{left 5}
+::intoi::\int_{{}0}{^}{{}\infty{}}  \ dx{left 5}
 
 ; Images
 InsertImage(name) {
@@ -311,6 +311,7 @@ InsertImage(name) {
     Sleep "10"
     Send name
     Send "{enter}"
+    Exit
 }
 
 ::def::{
