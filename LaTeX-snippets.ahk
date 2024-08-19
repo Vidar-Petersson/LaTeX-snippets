@@ -311,7 +311,7 @@ InsertImage(name) {
     Sleep "10"
     Send name
     Send "{enter}"
-    Exit
+    Send "{enter}"
 }
 
 ::def::{
